@@ -1,13 +1,275 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.body {
+  background: #fff;
+  color:#222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 50px auto;
+}
+
+header {
+  position: relative;
+}
+
+header .logo{
+  font-weight: 600;
+  font-size: 30px;
+  color:rgb(44, 44, 45);
+}
+
+header ul.nav {
+  float: right;
+  list-style-type: none;
+}
+
+header ul.nav li {
+  display: inline;
+  margin-left: 25px;
+  cursor: pointer;
+  transition: opasity 500ms ease;
+  color: rgb(44, 44, 45);
+}
+
+header .presentation {
+  margin: 50px 0;
+  background: url(./img/Let\'s\ remember\ the\ moment\ when\ the\ lo-fi\ anime\ girl\ disappeared\ \(3\).png) no-repeat;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode:multiply ;
+  background-color: #bcbcbc;
+  position: relative;
+}
+
+header .presentation::after {
+  content: 'лучшие произведения';
+  position: absolute;
+  top:100px;
+  left:50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color:rgb(44, 44, 45);
+}
+
+header .presentation::before {
+  content: 'в удобном формате';
+  position: absolute;
+  top:200px;
+  left:50px;
+  width: 300px;
+  font-size: 25px;
+  font-weight: 600;
+  color:rgb(44, 44, 45);
+}
+
+header .icons {
+  float:right;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  border-radius: 10px;
+  border: 1px solid rgb(44, 44, 45);
+  color: rgb(44, 44, 45);
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .icons:hover,
+header .icons.active{
+  color: #222;
+  transform: scale(1.1);
+}
+
+header .iconsOpen {
+  position: absolute;
+  top:30px;
+  right: 0;
+  width: 450px;
+  min-height: 100px;
+  background: #7c7474;
+  -webkit-box-shadow: 4px 5px 5px 0px rgba(58, 63, 67, 0.2);
+  -moz-box-shadow: 4px 5px 5px 0px rgba(58, 63, 67, 0.2);
+  box-shadow: 4px 5px 5px 0px rgba(58, 63, 67, 0.2);
+  z-index: 1000;
+}
+
+header .iconsOpen {
+  width:100%;
+}
+
+/* header .iconsOpen .allItem {
+  display:flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}  */
+
+header .iconsOpen .item img {
+  width: 300px;
+}
+
+header .iconsOpen .item h2 {
+  width: 300px;
+}
+
+header .iconsOpen .empty h2 {
+  margin: 20px 550px;
+}
+
+header .iconsOpen .item .delete-icon{
+  font-size: 15px;
+  text-align: center;
+}
+
+.Age div {
+  display: inline-block;
+  background: #bcbcbc;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+.Age div:hover {
+  border-color: silver;
+  transform: scale(1.1);
+}
+
+main {
+  display:flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* .allItem{
+  display:flex;
+  width: 100%;
+  flex-wrap: no wrap;
+  
+}
+
+.allItem, .item {
+  width: 30%;
+  background: #655c5c;
+  position: relative;
+  padding-bottom: 20px;
+} */
+
+main .item{
+  width: 29.3%;
+  margin-bottom: 50px;
+  background: #655c5c;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+main .OpenAddCard, h2, main h3,main h4, main h6{
+  margin: 10px 10px;
+}
+
+main .OpenAddCard .item img {
+  width: 100%;
+}
+
+/* main .add-cards{
+  position: absolute;
+  background: #aa9a9a;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border-radius: 10%;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+} */
+
+/* main .btn, .add-to-cards{ 
+  position: absolute;
+  left:100px;
+  background: #aa9a9a;
+  width: 100px;
+  height: 35px;
+  text-align: center;
+  border-radius: 10%;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+} */
+
+main .btn{
+  display:inline-block ;
+  margin-bottom: 20px;
+}
+
+.OpenAddCard {
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 9999;
+  overflow: auto;
+}
+
+.OpenAddCard > div {
+  width: 600px;
+  position: relative;
+  margin:  auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 9px;
+}
+
+.OpenAddCart {
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 10000;
+  overflow: auto;
+}
+
+.OpenAddCart > div {
+  width: 1000px;
+  position: relative;
+  margin:  auto;
+  padding: 40px 30px;
+  background: #fff;
+  border-radius: 9px;
+}
+
+.addtocard, .Addcard, .Add-card-to, .add-to-cards, .add-cards, .add-to-card{
+  display: inline-block;
+  background: #8e8989;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 25px;
+  margin-right: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 500ms ease;
+}
+
+
+
+footer {
+  text-align: center;
+  margin-top:100px;
 }
